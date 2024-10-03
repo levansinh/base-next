@@ -10,8 +10,9 @@
     "lint:fix": "eslint '*/**/*.{js,jsx,ts,tsx}'",
     "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
     "prettier": "prettier --check \"src/**/(*.tsx|*.ts|*.jsx|*.js|*.scss|*.css|*.json)\"",
-    "prepare": "husky",
-    "precommit": "lint-staged"
+    "husky-install": "cd .. && husky install",
+    "precommit": "lint-staged",
+    "prepare": "cd .. && husky install"
   },
   "husky": {
     "hooks": {
@@ -47,6 +48,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
